@@ -1,0 +1,301 @@
+/* Works on Firefox */
+* {
+scrollbar-width: thin;
+scrollbar-color: #296161 ;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #296161;
+border-radius: 10px;
+border: transparent;
+}
+
+
+body {
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+.container .leftside {
+    flex: 1;
+    background-color: #296161;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.container .rightside {
+    flex: 1;
+    background-image: url('../media/developer.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container .info {
+    color: #FFF;
+}
+.container .info .profession {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+.container .info .name {
+    font-weight: bold;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.container .info .buttons a {
+    display: inline-block;
+    background-color: #FFF;
+    color: #296161;
+    padding: 20px 40px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #111;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.container .info .buttons a.light {
+    color: #FFF;
+    background-color: #296161;
+}
+.container .info .buttons a:hover {
+    opacity: 0.8;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 2px solid #000;
+    margin: auto;
+    background-color: #000;
+}
+
+.conteudo:hover .alerta p{
+    font-style: italic;
+    text-decoration: underline;
+    padding-bottom: 2px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.conteudo .alerta p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+
+.redes-sociais a{
+    margin:0px 20px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.redes-sociais img{
+    object-fit: cover;
+}
+
+.container.projetos{
+    display: flex;
+    flex-direction: column;
+    background-color: #296161;
+    color: #fff;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.projetos-title{
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 0px 20px;
+}
+
+.projetos-imagens{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.projeto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 210px;
+    margin: auto;
+    margin-bottom: 25px ;
+}
+
+.projeto img{
+    width: inherit;
+    height: inherit;
+}
+
+.projeto--acessar{
+    position:absolute;
+    background-color:rgba(0, 0, 0, 0.6);
+    width:inherit;
+    height:inherit;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.projeto--acessar p{
+    font-size: 35px;
+    font-weight: 600;
+    color:#EEE;
+}
+
+.projeto:hover{
+    transition: all 0.2s;
+}
+
+.projeto:hover .projeto--acessar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media (max-width:838px){
+
+    .container .info .name {
+        font-size: 64px;
+        margin-top: 5px;
+    }
+
+    .container .info .buttons a{
+        display: block;
+        margin-top: 15px;
+        padding: 20px 30px;
+    }
+
+    .projetos-title {
+        text-align: center;
+        font-size: 64px;
+        margin-bottom: 35px;
+    }
+
+    .projeto--acessar p {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width:570px){
+    .container .leftside {
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+
+    .container .info .buttons a{
+        display: inline-block;
+        margin-top: 15px;
+        padding: 20px 50px;
+    }
+}
+
+
+@media (max-width:551px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container .leftside {
+        flex: 0;
+        max-height:200px;
+        text-align: center;
+    }
+
+    .container .info {
+    color: #FFF;
+    max-height: inherit;
+    }
+
+    .container .info .name {
+        font-size: 46px;
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
+
+    .container .info .buttons a{
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 35px;
+    }
+
+    .buttons{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:460px){
+
+    .projetos-title {
+        text-align: center;
+        font-size: 44px;
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
+
+    .projeto {
+        width: 345px;
+        height: 175px;
+        margin-bottom: 25px;
+    }
+
+    .conteudo .alerta p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:419px){
+    .projeto {
+        width: 320px;
+        height: 175px;
+        margin-bottom: 25px;
+    }
+
+    .container .info .buttons a{
+        display: inline-block;
+        margin-top: 15px;
+        padding: 5px 12px;
+    }
+
+    .conteudo .alerta p {
+        font-size: 11px;
+    }
+
+    .container .info .name {
+        font-size: 40px;
+    }
+}
+
